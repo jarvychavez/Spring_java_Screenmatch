@@ -5,7 +5,7 @@ import java.time.format.DateTimeParseException;
 
 public class Episodio {
     private Integer temporada;
-    private  String titulo;
+    private String titulo;
     private Integer numeroEpisodio;
     private Double evaluacion;
     private LocalDate fechaDeLanzamiento;
@@ -13,17 +13,18 @@ public class Episodio {
     public Episodio(Integer numero, DatosEpisodio d) {
         this.temporada = numero;
         this.titulo = d.titulo();
-        this.numeroEpisodio = d.numeroDelEpisodio();
+        this.numeroEpisodio = d.numeroEpisodio();
         try{
             this.evaluacion = Double.valueOf(d.evaluacion());
         }catch (NumberFormatException e){
             this.evaluacion = 0.0;
         }
-        try {
+        try{
             this.fechaDeLanzamiento = LocalDate.parse(d.fechaDeLanzamiento());
-        } catch (DateTimeParseException e) {
-            this.fechaDeLanzamiento = null; // Establecer como null si no se puede convertir
+        } catch (DateTimeParseException e){
+            this.fechaDeLanzamiento = null;
         }
+
     }
 
     public Integer getTemporada() {
