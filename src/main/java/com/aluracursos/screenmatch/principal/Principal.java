@@ -58,7 +58,7 @@ public class Principal {
                 .flatMap(t->t.episodios().stream())
                 .collect(Collectors.toList());
 
-        //Top 5 temporadas
+        //Top 5 temporadas jjjajajaja 
 //        System.out.println("Top 5 mejores episodios");
 //        datosEpisodios.stream()
 //                .filter(e->!e.evaluacion().equalsIgnoreCase("N/A"))
