@@ -53,6 +53,8 @@ public class Principal {
 
 
 
+
+
     private DatosSerie getDatosSerie() {
         System.out.println("Escribe el nombre de la serie que deseas buscar");
         var nombreSerie = teclado.nextLine();
