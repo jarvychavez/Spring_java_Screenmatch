@@ -25,6 +25,10 @@ public class Serie {
     private String sinopsis;
     @Transient
     private List<Episodio> episodios;
+// tenemos que poner este constructor de una manera manual para que pueda correr.(vacio)
+    public Serie(){
+
+    }
 
 
     public Serie(DatosSerie datosSerie){
