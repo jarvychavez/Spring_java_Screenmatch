@@ -23,7 +23,8 @@ public class Serie {
     private Categoria genero;
     private String actores;
     private String sinopsis;
-    @Transient
+    //@Transient este nos sirve para ignorar y que corra el programa adecuandamente(ignorando el campo de una manera temporal)
+    @OneToMany(mappedBy = "serie")
     private List<Episodio> episodios;
 // tenemos que poner este constructor de una manera manual para que pueda correr.(vacio)
     public Serie(){
