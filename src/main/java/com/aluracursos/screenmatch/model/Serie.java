@@ -24,7 +24,7 @@ public class Serie {
     private String actores;
     private String sinopsis;
     //@Transient este nos sirve para ignorar y que corra el programa adecuandamente(ignorando el campo de una manera temporal)
-    @OneToMany(mappedBy = "serie", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "serie", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Episodio> episodios;
 // tenemos que poner este constructor de una manera manual para que pueda correr.(vacio)
     public Serie(){
@@ -51,7 +51,8 @@ public class Serie {
                 ", evaluacion=" + evaluacion +
                 ", poster='" + poster + '\'' +
                 ", actores='" + actores + '\'' +
-                ", sinopsis='" + sinopsis + '\'';
+                ", sinopsis='" + sinopsis + '\''+
+                ", episodios='" + episodios + '\'';
     }
 
     public List<Episodio> getEpisodios() {
@@ -59,6 +60,7 @@ public class Serie {
     }
 
     public void setEpisodios(List<Episodio> episodios) {
+        episodios.forEach(e->e.setSerie(this));
         this.episodios = episodios;
     }
 
