@@ -13,7 +13,7 @@ public class Episodio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)    //llave autoincremental.
     private Long Id;
     private Integer temporada;
-    private  String titulo;
+    private String titulo;
     private Integer numeroEpisodio;
     private Double evaluacion;
     private LocalDate fechaDeLanzamiento;

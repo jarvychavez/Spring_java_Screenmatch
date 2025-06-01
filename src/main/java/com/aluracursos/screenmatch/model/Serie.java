@@ -24,7 +24,7 @@ public class Serie {
     private String actores;
     private String sinopsis;
     //@Transient este nos sirve para ignorar y que corra el programa adecuandamente(ignorando el campo de una manera temporal)
-    @OneToMany(mappedBy = "serie")
+    @OneToMany(mappedBy = "serie", cascade = CascadeType.ALL)
     private List<Episodio> episodios;
 // tenemos que poner este constructor de una manera manual para que pueda correr.(vacio)
     public Serie(){
