@@ -175,11 +175,13 @@ public class Principal {
         System.out.println("Evaluación apartir de cuál valor? ");
         var evaluacion = teclado.nextDouble();
         teclado.nextLine();
-        List<Serie> filtroSerie = repositorio.findByTotalTemporadasLessThanEqualAndEvaluacionGreaterThanEqual(totalTemporadas, evaluacion);
+        List<Serie> filtroSerie = repositorio.seriesPorTemporadaYEvaluacion(totalTemporadas,evaluacion);
         System.out.println("*** Series Filtradas ***");
         filtroSerie.forEach(s->
                 System.out.println(s.getTitulo() + " - Evaluación: " + s.getEvaluacion()));
     }
 
+    //Esta linea va en la 178 con el otro método: List<Serie> filtroSerie = repositorio.findByTotalTemporadasLessThanEqualAndEvaluacionGreaterThanEqual(totalTemporadas, evaluacion);
+    //List<Serie> filtroSerie = repositorio.seriesPorTemporadaYEvaluacion();
 
 }
