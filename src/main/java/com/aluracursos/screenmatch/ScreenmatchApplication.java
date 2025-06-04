@@ -13,25 +13,39 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
-public class ScreenmatchApplication implements CommandLineRunner {
+public class ScreenmatchApplication {
 
-	@Autowired  //Declara que queremos hacer una inyección de dependencia (interface)
-	private SerieRepository repository;
+
 
 	public static void main(String[] args) {
 
 		SpringApplication.run(ScreenmatchApplication.class, args);
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-		Principal principal = new Principal(repository);
-		principal.muestraElMenu();
+}
+
+
+
+
+
+
+
+
+
+
+
+//	@Autowired  //Declara que queremos hacer una inyección de dependencia (interface)
+//	private SerieRepository repository;
+
+//	@Override
+//	public void run(String... args) throws Exception {
+//		Principal principal = new Principal(repository);
+//		principal.muestraElMenu();
 
 
 
 //		EjemploStreams ejemploStreams = new EjemploStreams();
 //		ejemploStreams.muestraEjemplo();
 
-	}
-}
+
+
