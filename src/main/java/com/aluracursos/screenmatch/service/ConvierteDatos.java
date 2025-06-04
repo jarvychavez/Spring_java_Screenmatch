@@ -19,3 +19,5 @@ public class ConvierteDatos implements IConvierteDatos {
 
     //public DatosSerie obtenerDatos(String json);
 }
+
+//javier chavez parte III
