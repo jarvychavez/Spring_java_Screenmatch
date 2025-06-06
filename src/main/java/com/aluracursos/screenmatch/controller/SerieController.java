@@ -25,4 +25,10 @@ public class SerieController {
 
     }
 
+//    @GetMapping("/inicio")
+//    public String muestraMensaje(){
+//        return "Probando LiveReloading";
+//    }
+
+
 }
