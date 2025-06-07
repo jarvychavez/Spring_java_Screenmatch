@@ -20,8 +20,14 @@ public class SerieController {
 
 
     @GetMapping("/series")
-    public List<SerieDTO> obtenerTodasLasSeries(){
+    public List<SerieDTO> obtenerTodasLasSeries() {
         return servicio.obtenerTodasLasSeries();
+    }
+
+        @GetMapping("/series/top5")
+                public List<SerieDTO> obtenerTop5(){
+                return servicio.obtenerTop5();
+        }
 
 
 
@@ -37,7 +43,7 @@ public class SerieController {
 //                        s.getGenero(), s.getActores(), s.getSinopsis()))
 //                .collect(Collectors.toList());
 
-}
+
 
 //    @GetMapping("/inicio")
 //    public String muestraMensaje(){
