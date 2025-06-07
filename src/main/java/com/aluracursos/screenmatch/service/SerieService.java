@@ -26,10 +26,15 @@ public class SerieService {
 
     }
 
+    public List<SerieDTO> obtenerLanzamientosMasRecientes(){
+        return convierteDatos(repository.lanzamientosMasReciente());
+    }
+
     public List<SerieDTO> convierteDatos(List<Serie> serie){
       return serie.stream()
                 .map(s -> new SerieDTO(s.getTitulo(), s.getTotalTemporadas(), s.getEvaluacion(), s.getPoster(),
                         s.getGenero(), s.getActores(), s.getSinopsis()))
                 .collect(Collectors.toList());
     }
+
 }
